@@ -1,29 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Kengo's Homepage</title>
-  <!-- import the webpage's stylesheet -->
-  <link rel="stylesheet" href="./assets/style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kengo's Homepage</title>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="./assets/style.css" />
 
-  <!-- import the webpage's javascript file -->
-  <script src="./assets/script.js" defer></script>
-</head>
-<body>
-  <header>
-    Core 2 Interaction: Lab –&nbsp;<em>Home</em>
-  </header>
+    <!-- import the webpage's javascript file -->
+    <script src="./assets/script.js" defer></script>
+  </head>
+  <body>
+    <div class="grid grid-col-4">
+      <div class="grid-column">
+        <h1>Core 2 Interaction Lab</h1>
+        <p>
+          <small>Parsons School of Design<br />Spring 2023</small>
+        </p>
+      </div>
 
-  <!-- Navigation -->
-  <aside>
-    <section>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="studio/index.html">Projects</a></li>
-        <li><a href="lab/index.html">Lab</a></li>
-      </ul>
-    </section>
-  </aside>  
-</body>
+      <div class="grid-column">
+        <h2>Assignments</h2>
+        <ul>
+          <li class="list-item">
+            <a class="link" href="https://week1--questionnaire--kii.glitch.me/">Questionnaire</a>
+            <p class="description">✎ What do I remember?</p>
+          </li>
+          <li class="list-item">
+            <a class="link" href="lab/week2--html-css-structure-analysis.html">Reverse Enginer HTML/CSS Structure</a>
+            <p class="description">✎ Understanding what I don't understand</p>
+          </li>
+        </ul>
+        <!--
+          <li class="list-item">
+            <a class="link" href=""></a>
+            <p class="description"></p>
+          </li>
+        -->
+      </div>
+
+      <div class="grid-column">
+        <h2>Experiments</h2>
+        <ul>
+          <li class="list-item">
+            <a class="link" href="">Commonalities</a>
+            <p class="description">❐ Using CSS Selectors to show commonalities</p>
+          </li>
+          <!--
+            <li class="list-item">
+              <a class="link" href=""></a>
+              <p class="description"></p>
+            </li>
+          -->
+        </ul>
+      </div>
+
+      <div class="grid-column">
+        <h2>Inspiration</h2>
+        <ul>
+          <li class="list-item">
+            <a class="link" href="">Conditional Design</a>
+            <p class="description">✸ Design collective practicing social and constraint-based design</p>
+          </li>
+          <!--
+            <li class="list-item">
+              <a class="link" href=""></a>
+              <p class="description"></p>
+            </li>
+          -->
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <style>
+      body {
+        margin: 0;
+        position: relative;
+        background: red;
+      }
+      .poster {
+        width: 800px;
+        height: 800px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 100px;
+      }
+      .gradient {
+        background: linear-gradient(0.25turn, pink, red 75%);
+      }
+
+
+      .clip-circle {
+        clip-path: circle(400px at center);
+      }
+
+      .mono {
+        font-family: 'Major Mono Display', monospace;
+        height: 100%; width: 100%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="poster clip-circle">
+        <div class="poster gradient"></div>
+      </div>
+      <div class="poster" style="position: absolute; top: 0; left: 0; z-index:-1;">
+        <div class="mono">KALI MALONE</span>
+      </div>
+    </div>
+    
+
+  </body>
+</html>

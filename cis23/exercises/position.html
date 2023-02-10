@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Positioning</title>
+    <style>
+      .square {
+        width: 100px;
+        height: 100px;
+      }
+
+      .background--red {
+        background: red;
+      }
+      .background--blue {
+        background: blue;
+      }
+      .background--green {
+        background: green;
+      }
+
+      /* Positioning  */
+      .position--static {
+        position: static;
+      }
+
+      .position--relative {
+        position: relative;
+      }
+
+      .position--absolute {
+        position: absolute;
+      }
+
+      .position--fixed {
+        position: fixed;
+      }
+
+      /* Positioning properties */
+      .offset--top-10 {
+        top: 10px;
+      }
+
+      .offset--left-10 {
+        left: 10px;
+      }
+
+      .offset--top-20 {
+        top: 20px;
+      }
+
+      .offset--left-20 {
+        left: 20px;
+      }
+
+      .offset--right-0 {
+        right: 0;
+      }
+
+      .offset--bottom-0 {
+        bottom: 0;
+      }
+
+    </style>
+  </head>
+  <body>
+    <section id="example--flow-inline">
+      <h1>Example: Flow of Document, Inline</h1>
+      <div>
+        <span class="background--red">reed</span>
+        <span class="background--green">green</span>
+        <span class="background--blue">blue</span>
+      </div>
+      <p>Note: inline elements display one after the other, starting on the left.</p>
+    </section>
+
+    <section id="example--flow-block">
+    <h1>Example: Flow of Document, Block</h1>
+    <div>
+      <div class="square background--red">red</div>
+      <div class="square background--green">green</div>
+      <div class="square background--blue">blue</div>
+    </div>
+    <p>Note: block elements start at the top and move down the page.</p>
+  </section>
+
+    <section id="example--static">
+      <h1>Example: Static Squares</h1>
+      <div>
+        <div class="square position--static offset--left-10 offset--top-10 background--red"></div>
+        <div class="square position--static background--green"></div>
+        <div class="square position--static background--blue"></div>
+      </div>
+      <p>Note: Normal document flow, but positioning properties have no effect. Note, the red square is not affected by offset.</p>
+    </section>
+
+    <section id="example--relative">
+      <h1>Example: Relative Squares</h1>
+      <div>
+        <div class="square position--relative offset--left-10 offset--top-10 background--red"></div>
+        <div class="square position--relative background--green"></div>
+        <div class="square position--relative background--blue"></div>
+      </div>
+      <p>Note: Normal document flow, but offset <strong>relative to itself</strong> with positioning propertites: top, right, bottom, left. The offset does not affect the position of any other elements, therefore its as as if the element takes us its original space.</p>
+      <p>Creates new stacking context.</p>
+    </section>
+
+    <section id="example--absolute">
+      <h1>Example: Absolute Square</h1>
+      <div>
+        <div class="square position--relative background--red"></div>
+        <div class="square position--absolute offset--left-20 offset--top-20 background--green"></div>
+        <div class="square position--relative background--blue"></div>
+      </div>
+      <p>Note: Element is removed from document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block. Its final position is determined by the values of top, right, bottom, and left.</p>
+      <p>Note: The green square is relative to body! Its all the way up there. </p>
+      <p>Creates new stacking context.</p>
+    </section>
+
+    <section id="example--fixed">
+      <h1>Example: Fixed Square</h1>
+      <div>
+        <div class="square position--relative background--red"></div>
+        <div class="square position--realtive background--green"></div>
+        <div class="square position--fixed offset--right-0 offset--bottom-0 background--blue"></div>
+      </div>
+      <p>Note: Element is removed from document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block. Its final position is determined by the values of top, right, bottom, and left.</p>
+      <p>Note: The green square is relative to body! Its all the way up there. </p>
+      <p>Creates new stacking context.</p>
+    </section>
+  </body>
+</html>
