@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --color-kengo: pink;
+        --color-john: red;
+        --color-kengo-john: purple;
+        --color-suzie: orange;
+      }
+      .grid {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-row-gap: .5em;
+        grid-column-gap: 3em;
+      }
+
+      body {
+        font-family: 'Jost', sans-serif;
+        padding: 2em;
+      }
+
+      .override-font-size {
+        font-size: 17px;
+      }
+
+      .name {
+        font-size: 26px;
+        display: inline-block;
+      }
+
+      /* Interactions */
+      #kengo { color: var(--color-kengo); }
+      #kengo:hover ~ .grid > .kengo {
+        font-weight: bold;
+        color: var(--color-kengo);
+        opacity: 1;
+
+      }
+      #kengo:hover ~ .grid > div {
+        opacity: 0;
+      }
+
+      #john { color: var(--color-john); }
+      #john:hover ~ .grid > .john {
+        font-weight: bold;
+        color: var(--color-john);
+        opacity: 1;
+      }
+      #john:hover ~ .grid > div {
+        opacity: 0;
+      }
+
+      #suzie { color: var(--color-suzie); }
+      #suzie:hover ~ .grid > .suzie {
+        font-weight: bold;
+        color: var(--color-suzie);
+        opacity: 1;
+      }
+      #suzie:hover ~ .grid > div {
+        opacity: 0;
+      }
+
+      #kengo-john { color: var(--color-kengo-john); }
+      #kengo-john:hover ~ .grid > .kengo.john {
+        font-weight: bold;
+        font-style: italic;
+        color: var(--color-kengo-john);
+        opacity: 1;
+      }
+      #kengo-john:hover ~ .grid > div {
+        opacity: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="kengo" class="name">Kengo</div>
+    <div id="john" class="name">John</div>
+    <div id="suzie" class="name">Suzie</div>
+    <div id="kengo-john" class="name">Kengo + John</div>
+
+    <div class="grid">
+      <div class="">abrupt</div>
+      <div class="">acidic</div>
+      <div class="">adorable</div>
+      <div class="suzie">adventurous</div>
+      <div class="">aggressive</div>
+      <div class="">agitated</div>
+      <div class="">alert</div>
+      <div class="john">aloof</div>
+      <div class="">amiable</div>
+      <div class="">amused</div>
+      <div class="">annoyed</div>
+      <div class="">antsy</div>
+      <div class="">anxious</div>
+      <div class="">appalling</div>
+      <div class="">appetizing</div>
+      <div class="">apprehensive</div>
+      <div class="">arrogant</div>
+      <div class="">ashamed</div>
+      <div class="">astonishing</div>
+      <div class="">attractive</div>
+      <div class="">average</div>
+      <div class="">batty</div>
+      <div class="">beefy</div>
+      <div class="">bewildered</div>
+      <div class="">biting</div>
+      <div class="">bitter</div>
+      <div class="">bland</div>
+      <div class="">blushing</div>
+      <div class="">bored</div>
+      <div class="">brave</div>
+      <div class="john">bright</div>
+      <div class="">broad</div>
+      <div class="">bulky</div>
+      <div class="">burly</div>
+      <div class="kengo john">charming</div>
+      <div class="">cheeky</div>
+      <div class="kengo">cheerful</div>
+      <div class="">chubby</div>
+      <div class="">clean</div>
+      <div class="">clear</div>
+      <div class="">cloudy</div>
+      <div class="">clueless</div>
+      <div class="">clumsy</div>
+      <div class="suzie">colorful</div>
+      <div class="">colossal</div>
+      <div class="">combative</div>
+      <div class="">comfortable</div>
+      <div class="">condemned</div>
+      <div class="">condescending</div>
+      <div class="">confused</div>
+      <div class="">contemplative</div>
+      <div class="">convincing</div>
+      <div class="">convoluted</div>
+      <div class="">cooperative</div>
+      <div class="">corny</div>
+      <div class="">costly</div>
+      <div class="">courageous</div>
+      <div class="">crabby</div>
+      <div class="">creepy</div>
+      <div class="">crooked</div>
+      <div class="">cruel</div>
+      <div class="">cumbersome</div>
+      <div class="">curved</div>
+      <div class="">cynical</div>
+      <div class="">dangerous</div>
+      <div class="">dashing</div>
+      <div class="">decayed</div>
+      <div class="">deceitful</div>
+      <div class="">deep</div>
+      <div class="">defeated</div>
+      <div class="">defiant</div>
+      <div class="">delicious</div>
+      <div class="suzie">delightful</div>
+      <div class="">depraved</div>
+      <div class="">depressed</div>
+      <div class="">despicable</div>
+      <div class="">determined</div>
+      <div class="">dilapidated</div>
+      <div class="">diminutive</div>
+      <div class="">disgusted</div>
+      <div class="">distinct</div>
+      <div class="">distraught</div>
+      <div class="">distressed</div>
+      <div class="">disturbed</div>
+      <div class="">dizzy</div>
+      <div class="">drab</div>
+      <div class="">drained</div>
+      <div class="">dull</div>
+      <div class="">eager</div>
+      <div class="kengo">ecstatic</div>
+      <div class="john">elated</div>
+      <div class="">elegant</div>
+      <div class="">emaciated</div>
+      <div class="">embarrassed</div>
+      <div class="">enchanting</div>
+      <div class="">encouraging</div>
+      <div class="">energetic</div>
+      <div class="">enormous</div>
+      <div class="">enthusiastic</div>
+      <div class="">envious</div>
+      <div class="">exasperated</div>
+      <div class="">excited</div>
+      <div class="">exhilarated</div>
+      <div class="">extensive</div>
+      <div class="">exuberant</div>
+      <div class="">fancy</div>
+      <div class="">fantastic</div>
+      <div class="">fierce</div>
+      <div class="">filthy</div>
+      <div class="">flat</div>
+      <div class="">floppy</div>
+      <div class="">fluttering</div>
+      <div class="">foolish</div>
+      <div class="">frantic</div>
+      <div class="">fresh</div>
+      <div class="">friendly</div>
+      <div class="">frightened</div>
+      <div class="">frothy</div>
+      <div class="">frustrating</div>
+      <div class="">funny</div>
+      <div class="">fuzzy</div>
+      <div class="">gaudy</div>
+      <div class="suzie">gentle</div>
+      <div class="">ghastly</div>
+      <div class="">giddy</div>
+      <div class="">gigantic</div>
+      <div class="">glamorous</div>
+      <div class="">gleaming</div>
+      <div class="">glorious</div>
+      <div class="">gorgeous</div>
+      <div class="">graceful</div>
+      <div class="">greasy</div>
+      <div class="">grieving</div>
+      <div class="">gritty</div>
+      <div class="">grotesque</div>
+      <div class="">grubby</div>
+      <div class="">grumpy</div>
+      <div class="">handsome</div>
+      <div class="">happy</div>
+      <div class="">harebrained</div>
+      <div class="">healthy</div>
+      <div class="">helpful</div>
+      <div class="">helpless</div>
+      <div class="">high</div>
+      <div class="">hollow</div>
+      <div class="">homely</div>
+      <div class="">horrific</div>
+      <div class="">huge</div>
+      <div class="">hungry</div>
+      <div class="">hurt</div>
+      <div class="">icy</div>
+      <div class="john">ideal</div>
+      <div class="">immense</div>
+      <div class="">impressionable</div>
+      <div class="">intrigued</div>
+      <div class="">irate</div>
+      <div class="">irritable</div>
+      <div class="">itchy</div>
+      <div class="">jealous</div>
+      <div class="">jittery</div>
+      <div class="">jolly</div>
+      <div class="suzie">joyous</div>
+      <div class="">filthy</div>
+      <div class="">flat</div>
+      <div class="">floppy</div>
+      <div class="">fluttering</div>
+      <div class="">foolish</div>
+      <div class="">frantic</div>
+      <div class="">fresh</div>
+      <div class="">friendly</div>
+      <div class="">frightened</div>
+      <div class="">frothy</div>
+      <div class="">frustrating</div>
+      <div class="">funny</div>
+      <div class="">fuzzy</div>
+      <div class="">gaudy</div>
+      <div class="kengo">gentle</div>
+      <div class="">ghastly</div>
+      <div class="">giddy</div>
+      <div class="">gigantic</div>
+      <div class="">glamorous</div>
+      <div class="">gleaming</div>
+      <div class="">glorious</div>
+      <div class="">gorgeous</div>
+      <div class="">graceful</div>
+      <div class="">greasy</div>
+      <div class="">grieving</div>
+      <div class="">gritty</div>
+      <div class="">grotesque</div>
+      <div class="">grubby</div>
+      <div class="">grumpy</div>
+      <div class="john">handsome</div>
+      <div class="">happy</div>
+      <div class="">harebrained</div>
+      <div class="">healthy</div>
+      <div class="">helpful</div>
+      <div class="">helpless</div>
+      <div class="">high</div>
+      <div class="">hollow</div>
+      <div class="">homely</div>
+      <div class="">horrific</div>
+      <div class="">huge</div>
+      <div class="suzie">hungry</div>
+      <div class="">hurt</div>
+      <div class="">icy</div>
+      <div class="">ideal</div>
+      <div class="">immense</div>
+      <div class="">impressionable</div>
+      <div class="kengo">intrigued</div>
+      <div class="">irate</div>
+      <div class="">irritable</div>
+      <div class="">itchy</div>
+      <div class="">jealous</div>
+      <div class="">jittery</div>
+      <div class="">jolly</div>
+      <div class="kengo">joyous</div>
+      <div class="">juicy</div>
+      <div class="">jumpy</div>
+      <div class="kengo">kind</div>
+      <div class="">lackadaisical</div>
+      <div class="">large</div>
+      <div class="">lazy</div>
+      <div class="">lethal</div>
+      <div class="">little</div>
+      <div class="">lively</div>
+      <div class="">livid</div>
+      <div class="">lonely</div>
+      <div class="">loose</div>
+      <div class="">lovely</div>
+      <div class="suzie">lucky</div>
+      <div class="">ludicrous</div>
+      <div class="">macho</div>
+      <div class="">magnificent</div>
+      <div class="">mammoth</div>
+      <div class="">maniacal</div>
+      <div class="">massive</div>
+      <div class="">melancholy</div>
+      <div class="">melted</div>
+      <div class="">miniature</div>
+      <div class="">minute</div>
+      <div class="">mistaken</div>
+      <div class="">misty</div>
+      <div class="">moody</div>
+      <div class="">mortified</div>
+      <div class="">motionless</div>
+      <div class="">muddy</div>
+      <div class="">mysterious</div>
+      <div class="">narrow</div>
+      <div class="">nasty</div>
+      <div class="">naughty</div>
+      <div class="">nervous</div>
+      <div class="">nonchalant</div>
+      <div class="kengo">nonsensical</div>
+      <div class="john">nutritious</div>
+      <div class="">nutty</div>
+      <div class="">obedient</div>
+      <div class="">oblivious</div>
+      <div class="">obnoxious</div>
+      <div class="">odd</div>
+      <div class="kengo">old-fashioned</div>
+      <div class="">outrageous</div>
+      <div class="">panicky</div>
+      <div class="">perfect</div>
+      <div class="">perplexed</div>
+      <div class="">petite</div>
+      <div class="">petty</div>
+      <div class="">plain</div>
+      <div class="">pleasant</div>
+      <div class="">poised</div>
+      <div class="">pompous</div>
+      <div class="">precious</div>
+      <div class="">prickly</div>
+      <div class="">proud</div>
+      <div class="">pungent</div>
+      <div class="">puny</div>
+      <div class="">quaint</div>
+      <div class="">quizzical</div>
+      <div class="">ratty</div>
+      <div class="">reassured</div>
+      <div class="">relieved</div>
+      <div class="">repulsive</div>
+      <div class="suzie">responsive</div>
+      <div class="">ripe</div>
+      <div class="">robust</div>
+      <div class="">rotten</div>
+      <div class="">rotund</div>
+      <div class="">rough</div>
+      <div class="">round</div>
+      <div class="">salty</div>
+      <div class="">sarcastic</div>
+      <div class="">scant</div>
+      <div class="">scary</div>
+      <div class="">scattered</div>
+      <div class="">scrawny</div>
+      <div class="">selfish</div>
+      <div class="">shaggy</div>
+      <div class="">shaky</div>
+      <div class="">shallow</div>
+      <div class="">sharp</div>
+      <div class="">shiny</div>
+      <div class="">short</div>
+      <div class="">silky</div>
+      <div class="">silly</div>
+      <div class="john">skinny</div>
+      <div class="">slimy</div>
+      <div class="">slippery</div>
+      <div class="">small</div>
+      <div class="">smarmy</div>
+      <div class="">smiling</div>
+      <div class="">smoggy</div>
+      <div class="">smooth</div>
+      <div class="">smug</div>
+      <div class="">soggy</div>
+      <div class="">solid</div>
+      <div class="">sore</div>
+      <div class="">sour</div>
+      <div class="">sparkling</div>
+      <div class="">spicy</div>
+      <div class="">splendid</div>
+      <div class="">spotless</div>
+      <div class="">square</div>
+      <div class="">stale</div>
+      <div class="">steady</div>
+      <div class="">steep</div>
+      <div class="">sticky</div>
+      <div class="">stormy</div>
+      <div class="">stout</div>
+      <div class="">straight</div>
+      <div class="">strange</div>
+      <div class="">strong</div>
+      <div class="">stunning</div>
+      <div class="">substantial</div>
+      <div class="">successful</div>
+      <div class="">succulent</div>
+      <div class="">superficial</div>
+      <div class="">superior</div>
+      <div class="">swanky</div>
+      <div class="">sweet</div>
+      <div class="">tart</div>
+      <div class="">tasty</div>
+      <div class="">teeny</div>
+      <div class="">tender</div>
+      <div class="">tense</div>
+      <div class="">terrible</div>
+      <div class="">testy</div>
+      <div class="suzie">thankful</div>
+      <div class="">thick</div>
+      <div class="suzie">thoughtful</div>
+      <div class="">thoughtless</div>
+      <div class="">tight</div>
+      <div class="">timely</div>
+      <div class="">tricky</div>
+      <div class="">trite</div>
+      <div class="">troubled</div>
+      <div class="">twitter pated</div>
+      <div class="">uneven</div>
+      <div class="">unsightly</div>
+      <div class="">upset</div>
+      <div class="">uptight</div>
+      <div class="">vast</div>
+      <div class="">vexed</div>
+      <div class="">victorious</div>
+      <div class="">virtuous</div>
+      <div class="">vivacious</div>
+      <div class="kengo">vivid</div>
+      <div class="">wacky</div>
+      <div class="">weary</div>
+      <div class="">whimsical</div>
+      <div class="">whopping</div>
+      <div class="">wicked</div>
+      <div class="">witty</div>
+      <div class="">wobbly</div>
+      <div class="john">wonderful</div>
+      <div class="">worried</div>
+      <div class="">yummy</div>
+      <div class="">zany</div>
+      <div class="suzie">zealous</div>
+      <div class="">zippy</div>
+    </div>
+  </body>
+</html>
