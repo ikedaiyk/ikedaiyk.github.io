@@ -1,0 +1,23 @@
+body {
+  font-size: 60px;
+  font-family: 'Jost', sans-serif;
+}
+
+.word {
+  color: black;
+}
+
+.heading {
+  background: black;
+  color: white;
+}
+
+/*
+
+Sticky positioning can be thought of as a hybrid of relative and fixed positioning when its nearest scrolling ancestor is the viewport. A stickily positioned element is treated as relatively positioned until it crosses a specified threshold, at which point it is treated as fixed until it reaches the boundary of its parent.
+
+*/
+.heading--sticky {
+  position: sticky;
+  top: 0px;  /* Try playing around with adjusting this value. */
+}
