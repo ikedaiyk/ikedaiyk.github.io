@@ -1,9 +1,10 @@
 body {
   font-size: 60px;
   font-family: 'Jost', sans-serif;
+  padding: 100px;
 }
 
-.word {
+.words {
   color: black;
 }
 
