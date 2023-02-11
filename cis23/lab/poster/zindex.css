@@ -1,0 +1,59 @@
+body {
+  font-size: 30px;
+  font-family: 'Jost', sans-serif;
+  padding: 100px;
+  color: black;
+}
+
+.words {
+  padding: 100px;
+}
+
+.artist-profile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 300px;
+}
+
+.artist-image {
+  width: 750px;
+}
+
+/*
+
+  Utility classes
+
+*/
+/* Positioned "relative" to .artist-profile. */
+/* Creates a new stacking context because it is absolutely positioned and z-index is not auto. */
+/* We want this to appear below its sibling element, so we "push it back" by giving it a value of -1 */
+.image--in-back {
+  position: absolute;
+  z-index: -1;
+}
+/* Positioned "relative" to .artist-profile. */
+/* Creates a new stacking context because it is absolutely positioned and z-index is not auto. */
+/* We want this to appear above its sibling element, so we "push it front" by giving it a value of 1 */
+.image--in-front {
+  position: absolute;
+  z-index: 1;
+}
+.opacity--full {
+  opacity: 1;
+}
+.opacity--halfish {
+  opacity: .6;
+}
+.align-right {
+  right: 0;
+}
+
+/* Interaction causes updates. */
+.artist-profile:hover .image-opacity-full--on-hover {
+  opacity: 1;
+}
+
+.artist-profile:hover .image-z-index-increase--on-hover {
+  z-index: 1;
+}
