@@ -1,0 +1,61 @@
+body {
+  font-size: 60px;
+}
+
+.artist-link {
+  color: black;
+  font-family: 'Jost', sans-serif;  /* Set the initial font; this will be changed on hover. */
+  position: relative;   /* Need to apply z-index. */
+  z-index: 1;           /* Prevents "jitter" when hovering over. */
+}
+
+/* Use the :hover pseudo class to change the font on hover. */
+.artist-link:hover {
+  font-family: 'EB Garamond', serif;
+}
+
+/* Target pseudo classes of class .artist-link to remove underline. */
+.artist-link:link,
+.artist-link:visited,
+.artist-link:hover,
+.artist-link:active
+ {
+  color: black;
+  text-decoration: none;
+}
+
+/* This container is going to hold an image in a fixed position. */
+.fixed--backdrop-image-container {
+  position: fixed;  /* Taken out of normal document flow. Creates new stacking context relative to viewport. */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;    /* Initially hide because we're going to update its display to block when hovering of its sibling element later...  */
+}
+
+.centered--image-container {
+  margin: 0 auto;   /* In order to center, we need a width! */
+  height: 100%;
+  width: 50%;       /* The width will be 50% of its parent, .fixed--backdrop-image-container. */
+}
+
+.artist-image {
+  max-width: 100%;
+  position: relative;
+
+  /* This is a technique to vertically-center an element. */
+  /* NOTE: We'll be covering flexbox and grid, which makes this a lot easier.  */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*
+  On hover of .artist-link, using the "adjacent sibling combinator", target the next element and update it's display to block.
+
+  NOTE: The adjacent sibling combinator (+) separates two selectors and matches the second element only if it immediately follows
+  the first element, and both are children of the same parent element.
+*/
+.artist-link:hover + .fixed--backdrop-image-container {
+  display: block;
+}
